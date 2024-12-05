@@ -871,3 +871,43 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 # if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
+
+
+
+/**
+Añadido
+ */
+
+/**
+ * Directory for temporary files.
+ *
+ * A local file system path where temporary files will be stored. This
+ * directory should not be accessible over the web.
+ *
+ * @see \Drupal\Core\Site\Settings::$file_temp_path
+ */
+$settings['file_temp_path'] = 'sites/default/files/translations';
+
+/**
+ * Public file path.
+ *
+ * A local file system path where public files will be stored. This directory
+ * must exist and be writable by Drupal. This directory must be relative to
+ * the Drupal installation directory and be accessible over the web.
+ */
+$settings['file_public_path'] = 'sites/default/files';
+
+/**
+ * File system permissions.
+ *
+ * For Drupal to work correctly, you need to ensure that certain directories
+ * exist and are writable by the web server.
+ */
+$settings['file_chmod_directory'] = 0755;
+$settings['file_chmod_file'] = 0644;
+
+/**
+ * Temporary file path for the translation files.
+ */
+$config['system.file']['path']['temporary'] = 'sites/default/files/translations';
+
