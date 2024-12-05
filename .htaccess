@@ -1,3 +1,17 @@
+# Añadido
+
+<Directory "sites/default/files/translations">
+    Options Indexes MultiViews FollowSymLinks
+    AllowOverride All
+    Require all granted
+    <IfModule mod_php.c>
+        php_value upload_max_filesize 64M
+        php_value post_max_size 64M
+        php_value max_execution_time 300
+        php_value max_input_time 300
+    </IfModule>
+</Directory>
+
 #
 # Apache/PHP/Drupal settings:
 #
@@ -183,3 +197,5 @@ AddType image/webp .webp
   # Disable Proxy header, since it's an attack vector.
   RequestHeader unset Proxy
 </IfModule>
+
+
